@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="mn">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Physics C: Mechanics Test</title>
+	<link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700&display=swap" rel="stylesheet">
+	<style>
+		* {
+			margin: 0;
+			padding: 0;
+			box-sizing: border-box;
+		}
+
+		body {
+			min-height: 100vh;
+			padding: 40px 20px;
+			background: url('./background.jpeg') no-repeat center center fixed;
+			background-size: cover;
+			font-family: 'Source Sans Pro', sans-serif;
+			color: #fff;
+		}
+
+		.question-card {
+			width: min(100%, 720px);
+			margin: 0 auto;
+			padding: 32px;
+			background-color: rgba(0, 0, 0, 0.65);
+			border-radius: 20px;
+		}
+
+		.question-card h1 {
+			margin-bottom: 12px;
+			font-size: 2em;
+		}
+
+		.question {
+			margin: 24px 0;
+			font-size: 1.3em;
+			line-height: 1.5;
+		}
+
+		.answers {
+			display: grid;
+			gap: 12px;
+		}
+
+		.answer {
+			display: flex;
+			align-items: center;
+			gap: 12px;
+			padding: 14px 16px;
+			border: 1px solid rgba(255, 255, 255, 0.35);
+			border-radius: 8px;
+			cursor: pointer;
+		}
+
+		.answer:hover {
+			background-color: rgba(255, 204, 0, 0.15);
+		}
+
+		.answer input {
+			accent-color: #ffcc00;
+		}
+
+		.mu {
+			display: inline-block;
+			font-style: normal;
+			font-size: 1.1em;
+			line-height: 1;
+			vertical-align: baseline;
+		}
+
+		.sub {
+			display: inline-block;
+			font-size: 0.7em;
+			vertical-align: sub;
+			margin-left: -0.08em;
+		}
+
+		button {
+			margin-top: 24px;
+			padding: 12px 24px;
+			border: 0;
+			border-radius: 8px;
+			background-color: #ffcc00;
+			color: #000;
+			font: inherit;
+			font-weight: 700;
+			cursor: pointer;
+		}
+
+		button:hover {
+			background-color: #ffdd33;
+		}
+
+		.feedback {
+			min-height: 24px;
+			margin-top: 18px;
+			font-weight: 700;
+		}
+
+		.correct {
+			color: #8df0a1;
+		}
+
+		.incorrect {
+			color: #ff9b9b;
+		}
+	</style>
+</head>
+<body>
+	<main class="question-card">
+		<h1>Unit 2: Force and Translational dynamics</h1>
+		<p class="question">A block hangs at rest from a vertical rope attached to the ceiling. Which of the following correctly identifies the Newton's third law partner of the tension force exerted by the rope on the block?</p>
+
+		<form class="question-form" data-correct="b">
+			<div class="answers">
+				<label class="answer">
+					<input type="radio" name="answer-1" value="a">
+					<span>The weight of the block.</span>
+				</label>
+				<label class="answer">
+					<input type="radio" name="answer-1" value="b">
+					<span>The tension exerted by the block on the rope, directed downward.</span>
+				</label>
+				<label class="answer">
+					<input type="radio" name="answer-1" value="c">
+					<span>The normal force from the ceiling on the rope.</span>
+				</label>
+				<label class="answer">
+					<input type="radio" name="answer-1" value="d">
+					<span>The weight of the rope.</span>
+				</label>
+			</div>
+			<button type="submit">Хариу шалгах</button>
+			<p class="feedback" aria-live="polite"></p>
+		</form>
+
+		<p class="question">A block of mass m slides down a rough inclined plane that makes an angle θ with the horizontal. The coefficient of kinetic friction between the block and the incline is <span class="mu">μ</span><span class="sub">k</span>. What is the magnitude of the block's acceleration down the incline?</p>
+		<form class="question-form" data-correct="a">
+			<div class="answers">
+				<label class="answer">
+					<input type="radio" name="answer-2" value="a">
+					<span>g(sinθ − <span class="mu">μ</span><span class="sub">k</span> cosθ)</span>
+				</label>
+				<label class="answer">
+					<input type="radio" name="answer-2" value="b">
+					<span>g(sinθ + <span class="mu">μ</span><span class="sub">k</span> cosθ)</span>
+				</label>
+				<label class="answer">
+					<input type="radio" name="answer-2" value="c">
+					<span>g(cosθ − <span class="mu">μ</span><span class="sub">k</span> sinθ)</span>
+				</label>
+				<label class="answer">
+					<input type="radio" name="answer-2" value="d">
+					<span>g<span class="mu">μ</span><span class="sub">k</span> cosθ</span>
+				</label>
+			</div>
+			<button type="submit">Хариу шалгах</button>
+			<p class="feedback" aria-live="polite"></p>
+		</form>
+
+		<p class="question">A block of mass m rests on top of a second block of mass M, which sits on a horizontal frictionless floor. A horizontal force F is applied to the upper block, and the upper block slides on the lower block. There is friction between the blocks but not between the lower block and the floor. Which forces are exerted on the lower block of mass M?</p>
+		<form class="question-form" data-correct="a">
+			<div class="answers">
+				<label class="answer">
+					<input type="radio" name="answer-3" value="a">
+					<span>Weight, normal force from floor, normal force from upper block, kinetic friction from upper block in the direction of F, and no other forces.</span>
+				</label>
+				<label class="answer">
+					<input type="radio" name="answer-3" value="b">
+					<span>Weight, normal force from floor, normal force from upper block, and kinetic friction from upper block opposite to F.</span>
+				</label>
+				<label class="answer">
+					<input type="radio" name="answer-3" value="c">
+					<span>Weight, normal force from floor, and applied force F.</span>
+				</label>
+				<label class="answer">
+					<input type="radio" name="answer-3" value="d">
+					<span>Weight, normal force from floor, normal force from upper block, and applied force F.</span>
+				</label>
+			</div>
+			<button type="submit">Хариу шалгах</button>
+			<p class="feedback" aria-live="polite"></p>
+		</form>
+
+		<p class="question">Two blocks of masses m1 and m2 (m1 &gt; m2) are connected by a light string that passes over a frictionless, massless pulley. The blocks hang vertically. As the system accelerates, the tension in the string on either side of the pulley</p>
+		<form class="question-form" data-correct="c">
+			<div class="answers">
+				<label class="answer">
+					<input type="radio" name="answer-4" value="a">
+					<span>is greater on the side of the heavier block.</span>
+				</label>
+				<label class="answer">
+					<input type="radio" name="answer-4" value="b">
+					<span>is greater on the side of the lighter block.</span>
+				</label>
+				<label class="answer">
+					<input type="radio" name="answer-4" value="c">
+					<span>is the same on both sides because the string and pulley are massless.</span>
+				</label>
+				<label class="answer">
+					<input type="radio" name="answer-4" value="d">
+					<span>depends on the value of g.</span>
+				</label>
+			</div>
+			<button type="submit">Хариу шалгах</button>
+			<p class="feedback" aria-live="polite"></p>
+		</form>
+	</main>
+
+	<script>
+		document.querySelectorAll('.question-form').forEach((form) => {
+			form.addEventListener('submit', (event) => {
+				event.preventDefault();
+				const selectedAnswer = form.querySelector('input:checked');
+				const feedback = form.querySelector('.feedback');
+				const isCorrect = selectedAnswer && selectedAnswer.value === form.dataset.correct;
+
+				feedback.className = `feedback ${isCorrect ? 'correct' : 'incorrect'}`;
+				feedback.textContent = isCorrect
+					? 'Зөв хариулт!'
+					: 'Буруу хариулт. Дахин оролдоно уу.';
+			});
+		});
+	</script>
+</body>
+</html>

@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="mn">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Physics C: Mechanics Test</title>
+	<link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700&display=swap" rel="stylesheet">
+	<style>
+		* {
+			margin: 0;
+			padding: 0;
+			box-sizing: border-box;
+		}
+
+		body {
+			min-height: 100vh;
+			padding: 40px 20px;
+			background: url('./background.jpeg') no-repeat center center fixed;
+			background-size: cover;
+			font-family: 'Source Sans Pro', sans-serif;
+			color: #fff;
+		}
+
+		.question-card {
+			width: min(100%, 720px);
+			margin: 0 auto;
+			padding: 32px;
+			background-color: rgba(0, 0, 0, 0.65);
+			border-radius: 20px;
+		}
+
+		.question-card h1 {
+			margin-bottom: 12px;
+			font-size: 2em;
+		}
+
+		.question {
+			margin: 24px 0;
+			font-size: 1.3em;
+			line-height: 1.5;
+		}
+
+		.answers {
+			display: grid;
+			gap: 12px;
+		}
+
+		.answer {
+			display: flex;
+			align-items: center;
+			gap: 12px;
+			padding: 14px 16px;
+			border: 1px solid rgba(255, 255, 255, 0.35);
+			border-radius: 8px;
+			cursor: pointer;
+		}
+
+		.answer:hover {
+			background-color: rgba(255, 204, 0, 0.15);
+		}
+
+		.answer input {
+			accent-color: #ffcc00;
+		}
+
+		.sub {
+			display: inline-block;
+			font-size: 0.7em;
+			vertical-align: sub;
+			margin-left: -0.08em;
+		}
+
+		button {
+			margin-top: 24px;
+			padding: 12px 24px;
+			border: 0;
+			border-radius: 8px;
+			background-color: #ffcc00;
+			color: #000;
+			font: inherit;
+			font-weight: 700;
+			cursor: pointer;
+		}
+
+		button:hover {
+			background-color: #ffdd33;
+		}
+
+		.feedback {
+			min-height: 24px;
+			margin-top: 18px;
+			font-weight: 700;
+		}
+
+		.correct {
+			color: #8df0a1;
+		}
+
+		.incorrect {
+			color: #ff9b9b;
+		}
+	</style>
+</head>
+<body>
+	<main class="question-card">
+		<h1>Unit 3: Work, Energy, and Power</h1>
+		<p class="question">Two objects A and B have the same momentum. Object A has mass m and object B has mass 4m. The ratio of A's translational kinetic energy to B's translational kinetic energy is</p>
+		<form class="question-form" data-correct="d">
+			<div class="answers">
+				<label class="answer">
+					<input type="radio" name="answer-1" value="a">
+					<span>4 : 1</span>
+				</label>
+				<label class="answer">
+					<input type="radio" name="answer-1" value="b">
+					<span>2 : 1</span>
+				</label>
+				<label class="answer">
+					<input type="radio" name="answer-1" value="c">
+					<span>1 : 2</span>
+				</label>
+				<label class="answer">
+					<input type="radio" name="answer-1" value="d">
+					<span>1 : 4</span>
+				</label>
+			</div>
+			<button type="submit">Хариу шалгах</button>
+			<p class="feedback" aria-live="polite"></p>
+		</form>
+
+		<p class="question">A pendulum bob of mass m is attached to a string of length L and pulled aside so that the string is horizontal (making a 90° angle with the vertical), then released from rest. Using energy conservation and Newton's second law, the tension in the string at the lowest point of the swing is</p>
+		<form class="question-form" data-correct="b">
+			<div class="answers">
+				<label class="answer">
+					<input type="radio" name="answer-2" value="a">
+					<span>mg</span>
+				</label>
+				<label class="answer">
+					<input type="radio" name="answer-2" value="b">
+					<span>3mg</span>
+				</label>
+				<label class="answer">
+					<input type="radio" name="answer-2" value="c">
+					<span>2mg</span>
+				</label>
+				<label class="answer">
+					<input type="radio" name="answer-2" value="d">
+					<span>mg/2</span>
+				</label>
+			</div>
+			<button type="submit">Хариу шалгах</button>
+			<p class="feedback" aria-live="polite"></p>
+		</form>
+
+		<p class="question">Хэрэв биетэд үйлчлэх цэвэр хүч тогтмол байвал биетийн хурдатгал ямар байх вэ?</p>
+
+		<form class="question-form" data-correct="b">
+			<div class="answers">
+				<label class="answer">
+					<input type="radio" name="answer-3" value="a">
+					<span>Тэгтэй тэнцүү байна</span>
+				</label>
+				<label class="answer">
+					<input type="radio" name="answer-3" value="b">
+					<span>Тогтмол байна</span>
+				</label>
+				<label class="answer">
+					<input type="radio" name="answer-3" value="c">
+					<span>Үргэлж нэмэгдэнэ</span>
+				</label>
+				<label class="answer">
+					<input type="radio" name="answer-3" value="d">
+					<span>Үргэлж буурна</span>
+				</label>
+			</div>
+			<button type="submit">Хариу шалгах</button>
+			<p class="feedback" aria-live="polite"></p>
+		</form>
+
+		<p class="question">Хэрэв биет 5 секундийн турш 2 м/с хурдтай хөдөлвөл хэдэн метр зам туулах вэ?</p>
+		<form class="question-form" data-correct="c">
+			<div class="answers">
+				<label class="answer">
+					<input type="radio" name="answer-4" value="a">
+					<span>2 м</span>
+				</label>
+				<label class="answer">
+					<input type="radio" name="answer-4" value="b">
+					<span>5 м</span>
+				</label>
+				<label class="answer">
+					<input type="radio" name="answer-4" value="c">
+					<span>10 м</span>
+				</label>
+				<label class="answer">
+					<input type="radio" name="answer-4" value="d">
+					<span>25 м</span>
+				</label>
+			</div>
+			<button type="submit">Хариу шалгах</button>
+			<p class="feedback" aria-live="polite"></p>
+		</form>
+
+		<p class="question">A particle of mass m has potential energy U(x) = -c/x², where c is a positive constant. The particle is at rest at x = x<span class="sub">0</span>. Then the particle is given a total energy E such that -c/x<span class="sub">0</span>² &lt; E &lt; 0. The motion of the particle is</p>
+		<form class="question-form" data-correct="b">
+			<div class="answers">
+				<label class="answer">
+					<input type="radio" name="answer-3" value="a">
+					<span>unbounded; the particle escapes to infinity.</span>
+				</label>
+				<label class="answer">
+					<input type="radio" name="answer-3" value="b">
+					<span>bounded between two turning points, oscillating between them.</span>
+				</label>
+				<label class="answer">
+					<input type="radio" name="answer-3" value="c">
+					<span>at rest forever at x = x<span class="sub">0</span>.</span>
+				</label>
+				<label class="answer">
+					<input type="radio" name="answer-3" value="d">
+					<span>circular around the origin.</span>
+				</label>
+			</div>
+			<button type="submit">Хариу шалгах</button>
+			<p class="feedback" aria-live="polite"></p>
+		</form>
+
+		<p class="question">A block of mass m is released from rest and slides down a frictionless incline of angle θ. At time t after release, the instantaneous power delivered to the block by gravity is</p>
+		<form class="question-form" data-correct="d">
+			<div class="answers">
+				<label class="answer">
+					<input type="radio" name="answer-4" value="a">
+					<span>mg²t</span>
+				</label>
+				<label class="answer">
+					<input type="radio" name="answer-4" value="b">
+					<span>mgvcosθ</span>
+				</label>
+				<label class="answer">
+					<input type="radio" name="answer-4" value="c">
+					<span>mg²tsin² θ</span>
+				</label>
+				<label class="answer">
+					<input type="radio" name="answer-4" value="d">
+					<span>1/2 mg²t² sinθ</span>
+				</label>
+			</div>
+			<button type="submit">Хариу шалгах</button>
+			<p class="feedback" aria-live="polite"></p>
+		</form>
+	</main>
+
+	<script>
+		document.querySelectorAll('.question-form').forEach((form) => {
+			form.addEventListener('submit', (event) => {
+				event.preventDefault();
+				const selectedAnswer = form.querySelector('input:checked');
+				const feedback = form.querySelector('.feedback');
+				const isCorrect = selectedAnswer && selectedAnswer.value === form.dataset.correct;
+
+				feedback.className = `feedback ${isCorrect ? 'correct' : 'incorrect'}`;
+				feedback.textContent = isCorrect
+					? 'Зөв хариулт!'
+					: 'Буруу хариулт. Дахин оролдоно уу.';
+			});
+		});
+	</script>
+</body>
+</html>

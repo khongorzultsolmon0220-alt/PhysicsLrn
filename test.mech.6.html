@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="mn">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Physics C: Mechanics Test</title>
+	<link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700&display=swap" rel="stylesheet">
+	<style>
+		* {
+			margin: 0;
+			padding: 0;
+			box-sizing: border-box;
+		}
+
+		body {
+			min-height: 100vh;
+			padding: 40px 20px;
+			background: url('./background.jpeg') no-repeat center center fixed;
+			background-size: cover;
+			font-family: 'Source Sans Pro', sans-serif;
+			color: #fff;
+		}
+
+		.question-card {
+			width: min(100%, 720px);
+			margin: 0 auto;
+			padding: 32px;
+			background-color: rgba(0, 0, 0, 0.65);
+			border-radius: 20px;
+		}
+
+		.question-card h1 {
+			margin-bottom: 12px;
+			font-size: 2em;
+		}
+
+		.question {
+			margin: 24px 0;
+			font-size: 1.3em;
+			line-height: 1.5;
+		}
+
+		.answers {
+			display: grid;
+			gap: 12px;
+		}
+
+		.answer {
+			display: flex;
+			align-items: center;
+			gap: 12px;
+			padding: 14px 16px;
+			border: 1px solid rgba(255, 255, 255, 0.35);
+			border-radius: 8px;
+			cursor: pointer;
+		}
+
+		.answer:hover {
+			background-color: rgba(255, 204, 0, 0.15);
+		}
+
+		.answer input {
+			accent-color: #ffcc00;
+		}
+
+		button {
+			margin-top: 24px;
+			padding: 12px 24px;
+			border: 0;
+			border-radius: 8px;
+			background-color: #ffcc00;
+			color: #000;
+			font: inherit;
+			font-weight: 700;
+			cursor: pointer;
+		}
+
+		button:hover {
+			background-color: #ffdd33;
+		}
+
+		.feedback {
+			min-height: 24px;
+			margin-top: 18px;
+			font-weight: 700;
+		}
+
+		.correct {
+			color: #8df0a1;
+		}
+
+		.incorrect {
+			color: #ff9b9b;
+		}
+	</style>
+</head>
+<body>
+	<main class="question-card">
+		<h1>Unit 6: Energy and Momentum of Rotating Systems</h1>
+		<p class="question">A uniform solid sphere of mass M and radius R rolls without slipping with angular velocity ω about its center. The total kinetic energy of the sphere is</p>
+
+		<form class="question-form" data-correct="c">
+			<div class="answers">
+				<label class="answer">
+					<input type="radio" name="answer-1" value="a">
+					<span>½MR²ω²</span>
+				</label>
+				<label class="answer">
+					<input type="radio" name="answer-1" value="b">
+					<span>⅕MR²ω²</span>
+				</label>
+				<label class="answer">
+					<input type="radio" name="answer-1" value="c">
+					<span>⁷⁄₁₀MR²ω²</span>
+				</label>
+				<label class="answer">
+					<input type="radio" name="answer-1" value="d">
+					<span>⅖MR²ω²</span>
+				</label>
+			</div>
+			<button type="submit">Хариу шалгах</button>
+			<p class="feedback" aria-live="polite"></p>
+		</form>
+
+		<p class="question">A uniform thin hoop of mass M and radius R rolls without slipping from rest down an incline of vertical height h. Using energy conservation, the linear speed of the hoop's center at the bottom is</p>
+		<form class="question-form" data-correct="d">
+			<div class="answers">
+				<label class="answer">
+					<input type="radio" name="answer-2" value="a">
+					<span>√(2gh)</span>
+				</label>
+				<label class="answer">
+					<input type="radio" name="answer-2" value="b">
+					<span>√(4gh/3)</span>
+				</label>
+				<label class="answer">
+					<input type="radio" name="answer-2" value="c">
+					<span>√(10gh/7)</span>
+				</label>
+				<label class="answer">
+					<input type="radio" name="answer-2" value="d">
+					<span>√(gh)</span>
+				</label>
+			</div>
+			<button type="submit">Хариу шалгах</button>
+			<p class="feedback" aria-live="polite"></p>
+		</form>
+
+		<p class="question">A net torque varies with angular position as τ(θ) = cθ², where c is a positive constant. The torque is applied to a body of rotational inertia I initially at rest. After the body has rotated through an angle θ₀, the angular velocity of the body is</p>
+		<form class="question-form" data-correct="a">
+			<div class="answers">
+				<label class="answer">
+					<input type="radio" name="answer-3" value="a">
+					<span>√(2cθ₀³/(3I))</span>
+				</label>
+				<label class="answer">
+					<input type="radio" name="answer-3" value="b">
+					<span>√(cθ₀³/I)</span>
+				</label>
+				<label class="answer">
+					<input type="radio" name="answer-3" value="c">
+					<span>√(cθ₀²/I)</span>
+				</label>
+				<label class="answer">
+					<input type="radio" name="answer-3" value="d">
+					<span>√(cθ₀/I)</span>
+				</label>
+			</div>
+			<button type="submit">Хариу шалгах</button>
+			<p class="feedback" aria-live="polite"></p>
+		</form>
+
+		<p class="question">A net torque varying with time as τ(t) = τ₀(1 − t/T) for 0 ≤ t ≤ T (and zero thereafter) acts on a rigid body initially at rest with rotational inertia I. The angular momentum of the body at t = T is</p>
+		<form class="question-form" data-correct="d">
+			<div class="answers">
+				<label class="answer">
+					<input type="radio" name="answer-4" value="a">
+					<span>τ₀T</span>
+				</label>
+				<label class="answer">
+					<input type="radio" name="answer-4" value="b">
+					<span>τ₀T²/(2I)</span>
+				</label>
+				<label class="answer">
+					<input type="radio" name="answer-4" value="c">
+					<span>τ₀/T</span>
+				</label>
+				<label class="answer">
+					<input type="radio" name="answer-4" value="d">
+					<span>τ₀T/2</span>
+				</label>
+			</div>
+			<button type="submit">Хариу шалгах</button>
+			<p class="feedback" aria-live="polite"></p>
+		</form>
+	</main>
+
+	<script>
+		document.querySelectorAll('.question-form').forEach((form) => {
+			form.addEventListener('submit', (event) => {
+				event.preventDefault();
+				const selectedAnswer = form.querySelector('input:checked');
+				const feedback = form.querySelector('.feedback');
+				const isCorrect = selectedAnswer && selectedAnswer.value === form.dataset.correct;
+
+				feedback.className = `feedback ${isCorrect ? 'correct' : 'incorrect'}`;
+				feedback.textContent = isCorrect
+					? 'Зөв хариулт!'
+					: 'Буруу хариулт. Дахин оролдоно уу.';
+			});
+		});
+	</script>
+</body>
+</html>

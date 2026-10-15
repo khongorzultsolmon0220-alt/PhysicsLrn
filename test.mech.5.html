@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="mn">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Physics C: Mechanics Test</title>
+	<link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700&display=swap" rel="stylesheet">
+	<style>
+		* {
+			margin: 0;
+			padding: 0;
+			box-sizing: border-box;
+		}
+
+		body {
+			min-height: 100vh;
+			padding: 40px 20px;
+			background: url('./background.jpeg') no-repeat center center fixed;
+			background-size: cover;
+			font-family: 'Source Sans Pro', sans-serif;
+			color: #fff;
+		}
+
+		.question-card {
+			width: min(100%, 720px);
+			margin: 0 auto;
+			padding: 32px;
+			background-color: rgba(0, 0, 0, 0.65);
+			border-radius: 20px;
+		}
+
+		.question-card h1 {
+			margin-bottom: 12px;
+			font-size: 2em;
+		}
+
+		.question {
+			margin: 24px 0;
+			font-size: 1.3em;
+			line-height: 1.5;
+		}
+
+		.answers {
+			display: grid;
+			gap: 12px;
+		}
+
+		.answer {
+			display: flex;
+			align-items: center;
+			gap: 12px;
+			padding: 14px 16px;
+			border: 1px solid rgba(255, 255, 255, 0.35);
+			border-radius: 8px;
+			cursor: pointer;
+		}
+
+		.answer:hover {
+			background-color: rgba(255, 204, 0, 0.15);
+		}
+
+		.answer input {
+			accent-color: #ffcc00;
+		}
+
+		button {
+			margin-top: 24px;
+			padding: 12px 24px;
+			border: 0;
+			border-radius: 8px;
+			background-color: #ffcc00;
+			color: #000;
+			font: inherit;
+			font-weight: 700;
+			cursor: pointer;
+		}
+
+		button:hover {
+			background-color: #ffdd33;
+		}
+
+		.feedback {
+			min-height: 24px;
+			margin-top: 18px;
+			font-weight: 700;
+		}
+
+		.correct {
+			color: #8df0a1;
+		}
+
+		.incorrect {
+			color: #ff9b9b;
+		}
+	</style>
+</head>
+<body>
+	<main class="question-card">
+		<h1>Unit 5: Torque</h1>
+		<p class="question">A uniform ladder of length L and weight W leans against a frictionless wall with its base on a rough floor. The angle between the ladder and the floor is θ. A person of weight w climbs the ladder. As the person climbs upward, the magnitude of the horizontal force exerted by the wall on the ladder</p>
+
+		<form class="question-form" data-correct="c">
+			<div class="answers">
+				<label class="answer">
+					<input type="radio" name="answer-1" value="a">
+					<span>decreases.</span>
+				</label>
+				<label class="answer">
+					<input type="radio" name="answer-1" value="b">
+					<span>stays the same.</span>
+				</label>
+				<label class="answer">
+					<input type="radio" name="answer-1" value="c">
+					<span>increases.</span>
+				</label>
+				<label class="answer">
+					<input type="radio" name="answer-1" value="d">
+					<span>becomes zero.</span>
+				</label>
+			</div>
+			<button type="submit">Хариу шалгах</button>
+			<p class="feedback" aria-live="polite"></p>
+		</form>
+
+		<p class="question">A sign of weight 200 N hangs from the right end of a uniform horizontal beam of weight 100 N and length 2 m. The beam is attached at the left end by a hinge to a wall and supported by a cable from the right end to the wall, making an angle of 53° with the beam. The tension in the cable is</p>
+		<form class="question-form" data-correct="a">
+			<div class="answers">
+				<label class="answer">
+					<input type="radio" name="answer-2" value="a">
+					<span>313 N</span>
+				</label>
+				<label class="answer">
+					<input type="radio" name="answer-2" value="b">
+					<span>250 N</span>
+				</label>
+				<label class="answer">
+					<input type="radio" name="answer-2" value="c">
+					<span>400 N</span>
+				</label>
+				<label class="answer">
+					<input type="radio" name="answer-2" value="d">
+					<span>500 N</span>
+				</label>
+			</div>
+			<button type="submit">Хариу шалгах</button>
+			<p class="feedback" aria-live="polite"></p>
+		</form>
+
+		<p class="question">A wheel undergoes constant angular acceleration. In the first second (from t = 0 to t = 1), it rotates through 4 rad. In the second second (from t = 1 to t = 2), it rotates through an additional 8 rad. The angular acceleration of the wheel is</p>
+		<form class="question-form" data-correct="b">
+			<div class="answers">
+				<label class="answer">
+					<input type="radio" name="answer-3" value="a">
+					<span>2 rad/s²</span>
+				</label>
+				<label class="answer">
+					<input type="radio" name="answer-3" value="b">
+					<span>4 rad/s²</span>
+				</label>
+				<label class="answer">
+					<input type="radio" name="answer-3" value="c">
+					<span>8 rad/s²</span>
+				</label>
+				<label class="answer">
+					<input type="radio" name="answer-3" value="d">
+					<span>12 rad/s²</span>
+				</label>
+			</div>
+			<button type="submit">Хариу шалгах</button>
+			<p class="feedback" aria-live="polite"></p>
+		</form>
+
+		<p class="question">A solid disk of radius R rotates such that a point on the rim has a constant total acceleration magnitude a. At an instant when the angular velocity is ω, the angular acceleration of the disk is</p>
+		<form class="question-form" data-correct="b">
+			<div class="answers">
+				<label class="answer">
+					<input type="radio" name="answer-4" value="a">
+					<span>a / R</span>
+				</label>
+				<label class="answer">
+					<input type="radio" name="answer-4" value="b">
+					<span>√(a² - R²ω⁴) / R</span>
+				</label>
+				<label class="answer">
+					<input type="radio" name="answer-4" value="c">
+					<span>(a - Rω²) / R</span>
+				</label>
+				<label class="answer">
+					<input type="radio" name="answer-4" value="d">
+					<span>√(a / R)</span>
+				</label>
+			</div>
+			<button type="submit">Хариу шалгах</button>
+			<p class="feedback" aria-live="polite"></p>
+		</form>
+	</main>
+
+	<script>
+		document.querySelectorAll('.question-form').forEach((form) => {
+			form.addEventListener('submit', (event) => {
+				event.preventDefault();
+				const selectedAnswer = form.querySelector('input:checked');
+				const feedback = form.querySelector('.feedback');
+				const isCorrect = selectedAnswer && selectedAnswer.value === form.dataset.correct;
+
+				feedback.className = `feedback ${isCorrect ? 'correct' : 'incorrect'}`;
+				feedback.textContent = isCorrect
+					? 'Зөв хариулт!'
+					: 'Буруу хариулт. Дахин оролдоно уу.';
+			});
+		});
+	</script>
+</body>
+</html>

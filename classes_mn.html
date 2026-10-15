@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AP Classes</title>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            min-height: 100vh;
+            background: url('./background.jpeg') no-repeat center center fixed;
+            background-size: cover;
+            font-family: 'Source Sans Pro', sans-serif;
+            color: #fff;
+        }
+
+        .header {
+            padding: 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .header > div:first-child {
+            margin-left: calc(15vw - 30px);
+        }
+
+        .header h1 {
+            font-size: 2.5em;
+            font-weight: 700;
+            margin-top: 20px;
+        }
+
+        .header .subtitle {
+            font-size: 1.2em;
+            font-weight: 400;
+            margin-top: 10px;
+        }
+
+        .back-button {
+            background-color: #ffcc00;
+            color: #000;
+            padding: 12px 24px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 700;
+            margin-right: 30px;
+        }
+
+        .back-button:hover {
+            background-color: #ffdd33;
+        }
+
+        .cards-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+            padding: 40px 30px;
+            margin-left: 15%;
+            max-width: 1000px;
+        }
+
+        .card {
+            background-color: rgba(0, 0, 0, 0.5);
+            border-radius: 20px;
+            padding: 30px;
+            flex: 1;
+            min-width: 280px;
+            transition: transform 0.3s, background-color 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            background-color: rgba(0, 0, 0, 0.7);
+        }
+
+        .card h2 {
+            font-size: 1.8em;
+            margin-bottom: 15px;
+            font-weight: 700;
+        }
+
+        .card p {
+            font-size: 1em;
+            line-height: 1.5;
+            margin-bottom: 20px;
+            color: #ccc;
+        }
+
+        .card a {
+            display: inline-block;
+            background-color: #ffcc00;
+            color: #000;
+            padding: 10px 20px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 700;
+            transition: background-color 0.3s;
+        }
+
+        .card a:hover {
+            background-color: #ffdd33;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div>
+            <h1>AP хичээлүүд</h1>
+            <div class="subtitle">Хичээлээ сонгоод үзээрэй</div>
+        </div>
+        <a href="index.html" class="back-button">← Буцах</a>
+    </div>
+
+    <div class="cards-container">
+        <div class="card">
+            <h2>Physics C: Mechanics</h2>
+            <p>Calculus-д суурилсан механик физикийн хичээл</p>
+            <a href="physics_c.html">Хичээл үзэх</a>
+        </div>
+    </div>
+</body>
+</html>

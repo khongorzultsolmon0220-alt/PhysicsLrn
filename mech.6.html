@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Mechanics Slide Viewer</title>
+	<style>
+		html, body {
+			margin: 0;
+			height: 100%;
+			background: #000;
+			font-family: Arial, sans-serif;
+		}
+
+		body {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			overflow: hidden;
+		}
+
+		.viewer {
+			position: relative;
+			width: min(90vw, 1000px);
+			height: min(85vh, 860px);
+			display: flex;
+			align-items: center;
+			justify-content: center;
+		}
+
+		.slide {
+			display: block;
+			max-width: 100%;
+			max-height: 100%;
+			object-fit: contain;
+			background: #000;
+			border-radius: 8px;
+			box-shadow: 0 0 18px rgba(255,255,255,0.08);
+		}
+
+		.nav-button {
+			position: absolute;
+			top: 50%;
+			transform: translateY(-50%);
+			width: 52px;
+			height: 52px;
+			border: none;
+			border-radius: 50%;
+			background: rgba(255, 255, 255, 0.12);
+			color: white;
+			font-size: 28px;
+			font-weight: bold;
+			cursor: pointer;
+			user-select: none;
+			backdrop-filter: blur(2px);
+		}
+
+		.nav-button:hover {
+			background: rgba(255, 255, 255, 0.2);
+		}
+
+		.nav-button.left {
+			left: 16px;
+		}
+
+		.nav-button.right {
+			right: 16px;
+		}
+
+		.back-button {
+			position: fixed;
+			top: 20px;
+			right: 20px;
+			z-index: 10;
+			background: #ffcc00;
+			color: #000;
+			padding: 12px 18px;
+			border-radius: 8px;
+			text-decoration: none;
+			font-weight: 700;
+			box-shadow: 0 4px 12px rgba(0, 0, 0, 0.35);
+		}
+
+		.back-button:hover {
+			background: #ffdd33;
+		}
+	</style>
+</head>
+<body>
+	<a class="back-button" href="physics_c.html">← Буцах</a>
+	<div class="viewer">
+		<button class="nav-button left" type="button" aria-label="Previous image">&#10094;</button>
+		<img class="slide" src="mech.5.1.jpg" alt="Mechanics lesson 1">
+		<button class="nav-button right" type="button" aria-label="Next image">&#10095;</button>
+	</div>
+
+	<script>
+		const images = [
+			'mech.6.1.jpg',
+			'mech.6.2.jpg',
+			'mech.6.3.jpg',
+		];
+
+		let currentIndex = 0;
+		const slide = document.querySelector('.slide');
+		const prevButton = document.querySelector('.nav-button.left');
+		const nextButton = document.querySelector('.nav-button.right');
+
+		function renderSlide() {
+			slide.src = images[currentIndex];
+			slide.alt = `Mechanics lesson ${currentIndex + 1}`;
+		}
+
+		function showPrevious() {
+			currentIndex = (currentIndex - 1 + images.length) % images.length;
+			renderSlide();
+		}
+
+		function showNext() {
+			currentIndex = (currentIndex + 1) % images.length;
+			renderSlide();
+		}
+
+		prevButton.addEventListener('click', showPrevious);
+		nextButton.addEventListener('click', showNext);
+
+		let touchStartX = 0;
+		let touchEndX = 0;
+
+		document.addEventListener('touchstart', function (event) {
+			touchStartX = event.changedTouches[0].screenX;
+		}, { passive: true });
+
+		document.addEventListener('touchend', function (event) {
+			touchEndX = event.changedTouches[0].screenX;
+			const distance = touchEndX - touchStartX;
+			if (distance < -50) {
+				showNext();
+			} else if (distance > 50) {
+				showPrevious();
+			}
+		}, { passive: true });
+
+		renderSlide();
+	</script>
+</body>
+</html>
